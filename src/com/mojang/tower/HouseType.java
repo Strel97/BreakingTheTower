@@ -4,7 +4,7 @@ import java.awt.image.BufferedImage;
 
 public class HouseType
 {
-    public static final HouseType[] houseTypes = new HouseType[8];
+    public static final HouseType[] houseTypes = new HouseType[9];
 
     public static final HouseType MASON = new HouseType(1, "Mason", 10, 0, 15, 0).setAcceptsResource(Resources.ROCK);
     public static final HouseType WOODCUTTER = new HouseType(2, "Woodcutter", 10, 15, 0, 0).setAcceptsResource(Resources.WOOD);
@@ -14,6 +14,7 @@ public class HouseType
     public static final HouseType GUARDPOST = new HouseType(5, "Guardpost", 3, 0, 30, 0);
     public static final HouseType BARRACKS = new HouseType(3, "Barracks", 10, 15, 50, 0);
     public static final HouseType RESIDENCE = new HouseType(4, "Residence", 10, 30, 30, 30);
+    public static final HouseType PORT = new HouseType(0, "Port", 10, 10, 10, 0);
 
     public final int image;
     public final int radius;
@@ -65,6 +66,7 @@ public class HouseType
         if (this == GUARDPOST) return "Peons and warriors generally stay near these";
         if (this == BARRACKS) return "Converts peons into warriors for 5 wood each";
         if (this == RESIDENCE) return "Produces peons for 5 food each";
+        if (this == PORT) return "Takes nearby fish, produces food";
 
         return "**unknown**";
     }

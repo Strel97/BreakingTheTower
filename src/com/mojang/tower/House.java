@@ -144,6 +144,10 @@ public class House extends Entity
                     if (getRandomTarget(6, 40, noMobFilter)==null)
                         peon.setJob(new Job.Plant(this, 1));
                 }
+                else if (type == HouseType.PORT)
+                {
+                    peon.setJob(new Job.Gather(Resources.FOOD, this));
+                }
             }
 
             if (type == HouseType.GUARDPOST)
